@@ -1,23 +1,12 @@
-{% include "bibliotech/partials/head.html" %}
+{% extends "global/base.html" %}
 
-<body>
-    {% include "bibliotech/partials/header.html" %}
-    {% include "bibliotech/partials/search.html" %}
-
-    <main class="main-content-container mt-5">
-        <div class="container">
-            <h1>Seus Livros</h1>
-        </div>
-        <div class="main-content main-content-list container">
-            {% include "bibliotech/partials/livro.html" %}
-            {% include "bibliotech/partials/livro.html" %}
-            {% include "bibliotech/partials/livro.html" %}
-            {% include "bibliotech/partials/livro.html" %}
-            {% include "bibliotech/partials/livro.html" %}
-            {% include "bibliotech/partials/livro.html" %}
-        </div>
-    </main>
-
-</body>
-
-</html>
+{% block conteudo %}
+    <div class="main-content main-content-list container">
+        {% include "bibliotech/partials/livro.html" %}
+        {% include "bibliotech/partials/livro.html" %}
+        {% include "bibliotech/partials/livro.html" %}
+        {% include "bibliotech/partials/livro.html" %}
+        {% include "bibliotech/partials/livro.html" %}
+        {% include "bibliotech/partials/livro.html" %}
+    </div>
+{% endblock conteudo %}

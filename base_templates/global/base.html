@@ -1,0 +1,13 @@
+{% include "bibliotech/partials/head.html" %}
+
+<body>
+    {% include "bibliotech/partials/header.html" %}
+    {% include "bibliotech/partials/search.html" %}
+
+    <main class="main-content-container mt-5">
+        {% block conteudo %}{% endblock conteudo %}
+    </main>
+
+</body>
+
+</html>
