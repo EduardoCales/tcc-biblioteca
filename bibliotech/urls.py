@@ -1,8 +1,9 @@
 from django.urls import path
 
-from bibliotech.views import home
+from . import views
 
 
 urlpatterns = [
-    path('', home),
+    path('', views.home),
+    path('livros/<slug:id>/', views.livro)
 ]
