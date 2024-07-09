@@ -5,20 +5,20 @@
         </a>
     </div>
     <div class="livro-title-container">
-        <h2 class="livro-title">Aqui e o titulo</h2>
+        <h2 class="livro-title">{{ livro.title }}</h2>
     </div>
 
     <div class="livro-author">
         <span class="livro-author-item">
             <i class="fas fa-user">
-                Eduardo Cales
+                {{ livro.author.first_name }} {{ livro.author.last_name }}
             </i>
         </span>
         <span class="livro-author-item">
 
             <a href="/bibliotech/categoria/Acao/">
                 <i class="fas fa-layer-group">
-                    <span>Acao</span>
+                    <span>{{ livro.category.name }}</span>
                 </i>
             </a>
         </span>

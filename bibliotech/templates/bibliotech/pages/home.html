@@ -2,11 +2,8 @@
 
 {% block conteudo %}
     <div class="main-content main-content-list container">
-        {% include "bibliotech/partials/livro.html" %}
-        {% include "bibliotech/partials/livro.html" %}
-        {% include "bibliotech/partials/livro.html" %}
-        {% include "bibliotech/partials/livro.html" %}
-        {% include "bibliotech/partials/livro.html" %}
-        {% include "bibliotech/partials/livro.html" %}
+        {% for livro in  livros %}
+            {% include "bibliotech/partials/livro.html" %}
+        {% endfor %}
     </div>
 {% endblock conteudo %}
