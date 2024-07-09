@@ -1,9 +1,19 @@
 from django.shortcuts import render
 from utils.bibliotech.factory import make_book
+from bibliotech.models import Livro
 
 def home(request):
+    livros = Livro.objects.all().order_by('-id')
     return render(request, 'bibliotech/pages/home.html', context= {
-        'livros': [make_book() for _ in range(10)],
+        'livros': livros,
+    })
+
+def category(request, category_id):
+    livros = Livro.objects.filter(
+        category__id=category_id
+        ).order_by('-id')
+    return render(request, 'bibliotech/pages/home.html', context= {
+        'livros': livros,
     })
 
 def livro(request, id):
