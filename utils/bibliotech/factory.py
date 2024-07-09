@@ -14,7 +14,9 @@ fake = Faker('pt_BR')
 
 def make_book():
     return {
+        'id': fake.random_number(digits=2, fix_len=True),
         'title': fake.sentence(nb_words=6),
+        'description': fake.sentence(nb_words=250),
         'author': {
             'first_name': fake.first_name(),
             'last_name': fake.last_name(),
