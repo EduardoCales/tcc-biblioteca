@@ -9,4 +9,5 @@ def home(request):
 def livro(request, id):
     return render(request, 'bibliotech/pages/livro-view.html', context={
         'livro': make_book(),
+        'is_detail_page': True,
     })

@@ -5,7 +5,7 @@ from faker import Faker
 
 
 def rand_ratio():
-    return randint(840, 900), randint(473, 573)
+    return randint(650, 750), randint(650, 750)
 
 
 fake = Faker('pt_BR')
@@ -23,7 +23,7 @@ def make_book():
             'name': fake.word()
         },
         'cover': {
-            'url': 'https://loremflickr.com/%s/%s/food,cook' % rand_ratio(),
+            'url': 'https://loremflickr.com/%s/%s/books' % rand_ratio(),
         }
     }
 
